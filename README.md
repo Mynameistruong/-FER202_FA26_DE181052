@@ -1,6 +1,3 @@
-Hiểu luôn! Thay vì viết theo kiểu "senior" hay chuyên gia sừng sỏ, chúng ta sẽ đổi tone sang phong cách **"vừa mới bước chân vào thế giới code, cái gì cũng thấy mới mẻ, tò mò và đang trên đường mày mò học hỏi"**.
-
-Một chiếc `README.md` chân thực, khiêm tốn nhưng vẫn cực kỳ chỉn chu, đáng yêu và đầy tinh thần cầu tiến sẽ giúp bạn ghi điểm tuyệt đối. Cùng xem mẫu bên dưới nhé:
 
 ---
 
