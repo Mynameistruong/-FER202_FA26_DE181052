@@ -1,16 +1,29 @@
-# React + Vite
+Chuẩn luôn! Đã là coder tài năng thì giao diện hay "nhật ký chiến công" cũng phải thật **rực rỡ, bắt mắt và có điểm nhấn** thì đọc mới có hứng thú đúng không nào? 🎨✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hãy cùng "phù phép" lại nhật ký hành trình lập trình của chúng mình trở nên lung linh và sống động hơn nhé! 🚀
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 🌈 NHẬT KÝ HÀNH TRÌNH: CHINH PHỤC ĐỈNH CAO ES6 & REACT 💻🔥
 
-## React Compiler
+> *“Code đã đẹp, giao diện đã xinh, lại thêm phần điểm nhấn lung linh thì điểm A+ chắc chắn nằm trong tầm tay!”* 😎
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+### 🌟 Bài 1: `WelcomeCard` – Khởi Đầu Ngọt Ngào & Sáng Tạo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Tâm điểm công nghệ:** Sử dụng linh hoạt **`const` / `let**` kết hợp **Template Literals** (`${...}`) để tạo lời chào chuẩn xác theo thời gian thực.
+
+
+* **Điểm nhấn đắt giá:**
+* 🎯 **Tư duy quản lý biến đỉnh cao:** Biết dùng `const` cho hằng số bất biến và dùng `let` cho `session` (vì buổi sáng, chiều, tối thay đổi theo giờ).
+
+
+* 🎨 **Đổi màu viền thần thánh:** Tự động tính tuổi và gán class `border-success` hay `border-warning` tùy theo mốc trưởng thành 18 tuổi.
+
+
+
+
+
+---
+
