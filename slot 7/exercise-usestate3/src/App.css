@@ -1,0 +1,39 @@
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+}
+
+.toggle-panel {
+  display: flex;
+  min-width: 160px;
+  min-height: 84px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+  padding: 16px;
+  color: #ffffff;
+  background: #292d35;
+}
+
+.toggle-button {
+  padding: 5px 14px;
+  color: #111111;
+  background: #ffffff;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 160ms ease;
+}
+
+.toggle-button:hover {
+  transform: translateY(-2px);
+}
+
+.toggle-message {
+  margin: 0;
+  font-size: 1.4rem;
+}
