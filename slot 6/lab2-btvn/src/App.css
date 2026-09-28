@@ -182,3 +182,33 @@
     border-right-color: var(--border);
   }
 }
+
+.menu-section {
+  background: #111111;
+}
+
+.booking-section {
+  background: #212529;
+}
+
+.shadow-text {
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.75);
+}
+
+.menu-section .card {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.menu-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(255, 193, 7, 0.18) !important;
+}
+
+.booking-section .form-control,
+.booking-section .form-select {
+  color: #ffffff;
+}
+
+.booking-section .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}

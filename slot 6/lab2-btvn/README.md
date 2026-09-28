@@ -1,4 +1,38 @@
-# React + Vite
+# Pizza House - Lab 2
+
+## Cấu trúc bài
+
+Ứng dụng được chia thành các phần nhỏ để dễ học và sửa:
+
+1. `App.jsx`: ghép các khu vực chính của trang.
+2. `NavbarComponent.jsx`: thanh điều hướng và ô tìm kiếm.
+3. `BannerComponent.jsx`: carousel giới thiệu Pizza House.
+4. `MenuSection.jsx`: khu vực danh sách món ăn.
+5. `MenuCard.jsx`: giao diện của từng món ăn.
+6. `menuData.js`: dữ liệu món ăn, giá, badge và hình ảnh.
+7. `BookingForm.jsx`: form đặt bàn/liên hệ.
+
+## Luồng hiển thị
+
+`App` gọi các component theo thứ tự:
+
+`Navbar` -> `Banner` -> `Menu` -> `Booking Form`
+
+Các component dùng React Bootstrap để tạo layout responsive bằng `Container`, `Row`, `Col`, `Card`, `Carousel` và `Form`.
+
+## Chạy bài
+
+```bash
+npm install
+npm run dev
+```
+
+Kiểm tra lỗi bằng:
+
+```bash
+npm run lint
+npm run build
+```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
