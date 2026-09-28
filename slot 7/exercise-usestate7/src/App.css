@@ -1,0 +1,68 @@
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #f2efff, #eaf4ff);
+}
+
+.exercise-card {
+  width: min(100%, 560px);
+  border-top: 6px solid #6f42c1 !important;
+  border-radius: 14px;
+  box-shadow: 0 16px 35px rgba(72, 48, 126, 0.14);
+  animation: card-entrance 500ms ease-out both;
+}
+
+.exercise-label {
+  color: #6f42c1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 6px 0 8px;
+  color: #30205a;
+}
+
+.drag-list {
+  gap: 10px;
+  display: grid;
+}
+
+.drag-list .list-group-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #ddd2f4;
+  border-radius: 8px;
+  cursor: grab;
+  transition: transform 160ms ease, background-color 160ms ease, opacity 160ms ease;
+}
+
+.drag-list .list-group-item:hover {
+  background: #f7f3ff;
+  transform: translateX(4px);
+}
+
+.drag-list .list-group-item:active {
+  cursor: grabbing;
+}
+
+.drag-list .list-group-item.is-dragging {
+  opacity: 0.45;
+  background: #ede5ff;
+}
+
+.drag-handle {
+  color: #6f42c1;
+  font-weight: 800;
+  letter-spacing: -5px;
+}
+
+@keyframes card-entrance {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
