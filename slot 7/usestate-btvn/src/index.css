@@ -1,0 +1,99 @@
+:root {
+  font-family: 'Segoe UI', sans-serif;
+  color: #20302d;
+  background: #f4f7f4;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #f4f7f4;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1180px;
+}
+
+.app-container {
+  max-width: 820px;
+}
+
+.app-container-wide {
+  max-width: 1180px;
+}
+
+.eyebrow {
+  color: #527a6d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.exercise-nav {
+  gap: 0.35rem;
+  padding-bottom: 0.25rem;
+}
+
+.exercise-nav .nav-link {
+  color: #34544a;
+  white-space: nowrap;
+}
+
+.exercise-nav .nav-link.active {
+  background: #527a6d;
+}
+
+.faq-trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.faq-trigger span:last-child {
+  color: #527a6d;
+  font-size: 1.35rem;
+}
+
+.star-rating {
+  display: flex;
+  min-height: 2.5rem;
+  align-items: center;
+}
+
+.star-button {
+  padding: 0 0.18rem;
+  border: 0;
+  background: transparent;
+  color: #c58c19;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.review-row,
+.quiz-result {
+  padding: 1rem 0;
+  border-top: 1px solid #dce4df;
+}
+
+.review-stars {
+  color: #c58c19;
+  white-space: nowrap;
+}
