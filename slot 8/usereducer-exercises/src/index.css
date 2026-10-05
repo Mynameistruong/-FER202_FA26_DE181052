@@ -201,6 +201,80 @@ h2 {
   min-width: 92px;
 }
 
+.app-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(220, 239, 226, 0.56), transparent 42%),
+    #f2f6f3;
+}
+
+.app-shell > .container {
+  max-width: 1120px;
+}
+
+.app-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.25rem, 3rem, 3rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.exercise-picker {
+  width: min(100%, 280px);
+}
+
+.exercise-stage {
+  animation: panel-enter 240ms ease-out both;
+}
+
+.exercise-panel {
+  max-width: 760px;
+  border-color: #d9e3dc;
+  border-radius: 8px;
+  box-shadow: 0 12px 36px rgba(43, 69, 55, 0.07);
+}
+
+.kanban-column {
+  min-height: 250px;
+  border-color: #d9e3dc;
+  border-radius: 8px;
+}
+
+.task-title {
+  cursor: text;
+  overflow-wrap: anywhere;
+}
+
+.task-card,
+.note-card {
+  border-radius: 6px;
+}
+
+.note-color-button {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border-radius: 50%;
+}
+
+.note-card {
+  min-height: 170px;
+}
+
+.timeline-time {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 575.98px) {
+  .app-heading {
+    align-items: stretch !important;
+  }
+
+  .exercise-picker {
+    width: 100%;
+  }
+}
+
 @keyframes panel-enter {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
