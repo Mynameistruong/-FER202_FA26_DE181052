@@ -9,3 +9,4 @@ export const HomePage = () => (
     </Button>
   </Container>
 );
+export default HomePage;
