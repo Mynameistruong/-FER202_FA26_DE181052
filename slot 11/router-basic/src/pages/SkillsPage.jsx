@@ -1,8 +1,5 @@
-const SkillsPage = () => {
-    return (
-        <div>
-            <h1> Skill pages</h1>
-        </div>
-    );
+﻿const SkillsPage = () => {
+  return <h1>Skills Page</h1>;
 };
+
 export default SkillsPage;
