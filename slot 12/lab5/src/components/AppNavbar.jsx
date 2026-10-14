@@ -6,6 +6,7 @@ const MENU = [
   { to: '/about', label: 'Giới thiệu' },
   { to: '/contact', label: 'Liên hệ' },
   { to: '/new', label: 'Tin tức' },
+  { to: '/products', label: 'Sản phẩm' },
 ];
 
 export const AppNavbar = () => {
