@@ -1,6 +1,7 @@
-import './App.css'
+import AxiosDemo from './components/AxiosDemo';
 
 function App() {
-  return <h1>DemoAxios</h1>
+  return <AxiosDemo />;
 }
-export default App
+
+export default App;
