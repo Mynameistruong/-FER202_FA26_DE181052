@@ -1,70 +1,74 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Alert, Card, Spinner } from 'react-bootstrap';
-
-const API_URL = 'https://jsonplaceholder.typicode.com/posts/1';
+import { useCallback, useState } from 'react'
+import { Alert, Card, Form, Spinner } from 'react-bootstrap'
+import postApi from '../api/postApi.js'
+import useAxios from '../hooks/useAxios.js'
 
 function AxiosDemo() {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    axios
-      .get(API_URL)
-      .then((response) => {
-        if (isMounted) {
-          setData(response.data);
-          setError(null);
-        }
-      })
-      .catch((requestError) => {
-        if (isMounted) {
-          setError(requestError.message);
-        }
-      })
-      .finally(() => {
-        if (isMounted) {
-          setLoading(false);
-        }
-      });
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="d-flex align-items-center justify-content-center gap-2 py-5">
-        <Spinner animation="border" role="status" />
-        <span>Loading...</span>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <Alert variant="danger">
-        Error: {error}
-      </Alert>
-    );
-  }
+  const [postId, setPostId] = useState('1')
+  const fetchPost = useCallback(
+    (signal) => postId ? postApi.getById(postId, signal) : Promise.resolve(null),
+    [postId],
+  )
+  const { data: post, loading, error, refetch } = useAxios(fetchPost)
 
   return (
-    <Card className="mx-auto shadow-sm post-card">
-      <Card.Header className="fw-semibold">
-        Post #{data.id}
-      </Card.Header>
+    <section>
+      <div className="page-heading">
+        <div>
+          <p className="eyebrow">NC4 · AbortController</p>
+          <h1>Đổi bài viết và hủy request cũ</h1>
+          <p className="text-secondary">
+            Thử đổi ID liên tục; request trước sẽ bị hủy và chỉ dữ liệu mới nhất được hiển thị.
+          </p>
+        </div>
+      </div>
 
-      <Card.Body>
-        <Card.Title>{data.title}</Card.Title>
-        <Card.Text>{data.body}</Card.Text>
-      </Card.Body>
-    </Card>
-  );
+      <Form.Group className="mb-4" controlId="post-id">
+        <Form.Label>Post ID (1–100)</Form.Label>
+        <Form.Control
+          type="number"
+          min="1"
+          max="100"
+          step="1"
+          value={postId}
+          onChange={(event) => {
+            const value = event.target.value
+            const numericValue = Number(value)
+            if (value === '' || (Number.isInteger(numericValue) && numericValue >= 1 && numericValue <= 100)) {
+              setPostId(value)
+            }
+          }}
+          onBlur={() => {
+            if (!postId) setPostId('1')
+          }}
+        />
+      </Form.Group>
+
+      {loading && (
+        <div className="d-flex align-items-center gap-2 py-4" role="status">
+          <Spinner animation="border" size="sm" />
+          Đang tải bài viết #{postId}...
+        </div>
+      )}
+      {error && (
+        <Alert variant="danger">
+          {error}
+          <button type="button" className="btn btn-link p-0 ms-2" onClick={() => void refetch()}>
+            Thử lại
+          </button>
+        </Alert>
+      )}
+      {post && !loading && (
+        <Card className="content-card">
+          <Card.Header>Bài viết #{post.id}</Card.Header>
+          <Card.Body>
+            <Card.Title>{post.title}</Card.Title>
+            <Card.Text>{post.body}</Card.Text>
+          </Card.Body>
+        </Card>
+      )}
+    </section>
+  )
 }
 
-export default AxiosDemo;
+export default AxiosDemo
