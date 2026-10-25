@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
 export default function CreatePost() {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
@@ -13,7 +15,7 @@ export default function CreatePost() {
     setSubmitting(true);
     setError(null);
     try {
-      const response = await axios.post('https://jsonplaceholder.typicode.com/posts', {
+      const response = await axios.post(`${API_URL}/posts`, {
         title, body, userId: 1,
       });
       setResult({ status: response.status, data: response.data });
@@ -36,7 +38,7 @@ export default function CreatePost() {
       </form>
       {error && <p className="error">Lỗi: {error}</p>}
       {result && <Result result={result} />}
-      <p className="note">JSONPlaceholder mô phỏng POST; dữ liệu tạo mới không được lưu lâu dài trên server.</p>
+      <p className="note">Bài viết được lưu vào db.json qua JSON Server.</p>
     </div>
   );
 }
