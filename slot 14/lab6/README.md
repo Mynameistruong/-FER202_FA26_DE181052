@@ -4,7 +4,13 @@
 1. Cài Node.js phiên bản tương thích với Vite 5 (khuyến nghị Node.js 18+).
 2. Giải nén project và mở terminal trong thư mục `lab6`.
 3. Chạy `npm install`.
-4. Chạy `npm run dev`, sau đó mở URL Vite hiển thị trong terminal.
+4. Chạy `npm run dev:all` để mở đồng thời Vite và JSON Server, sau đó mở URL Vite hiển thị trong terminal.
+
+## JSON Server
+- Cơ sở dữ liệu mẫu nằm ở `db.json`; bản gốc để khôi phục nằm ở `db.backup.json`.
+- API chạy tại `http://localhost:3001`; thử `GET /posts`, `GET /comments` hoặc `GET /profile`.
+- Có thể khởi động riêng từng tiến trình bằng `npm run dev` và `npm run server`.
+- Các request Axios trong phần TODO 1 hiện vẫn dùng JSONPlaceholder; JSON Server được chạy độc lập để thực hành REST API. Khi gọi `POST`, `PUT`, `PATCH` hoặc `DELETE` trực tiếp tới `http://localhost:3001`, dữ liệu sẽ được lưu vào `db.json`.
 
 ## Nội dung
 Bảy component theo TODO 1 trong `Lab6_JsonServer.md`:
